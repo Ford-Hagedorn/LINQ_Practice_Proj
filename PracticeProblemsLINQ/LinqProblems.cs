@@ -27,7 +27,8 @@ namespace PracticeProblemsLINQ
         public static List<string> RunProblem2(List<string> names)
         {
             //code
-
+            var nameChart = new List<string>(names);
+            var nameList = nameChart.Find(x => x.
             //return
 
         }
@@ -39,9 +40,10 @@ namespace PracticeProblemsLINQ
         public static Customer RunProblem3(List<Customer> customers)
         {
             //code
-
+            var custName = new List<Customer>(customers);
+            var customerMike = custName.Find(x => x.Equals("Mike"));
             //return
-
+            return customerMike;
         }
         #endregion
 
@@ -52,6 +54,12 @@ namespace PracticeProblemsLINQ
         public static Customer RunProblem4(List<Customer> customers)
         {
             //code
+            var custId = new List<Customer>(customers);
+            var find3 = custId.Find(x => x.Id.Equals(3));
+            var change3FN = find3.FirstName.Replace(oldChar, newChar: "Scott");
+            var change3LN = find3.LastName.Replace(oldChar, newChar: "Aukerman");
+            return change3FN, change3LN;
+
 
             //return
 
