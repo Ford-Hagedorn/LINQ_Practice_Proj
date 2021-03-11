@@ -76,9 +76,12 @@ namespace PracticeProblemsLINQ
         public static double RunProblem5(List<string> classGrades)
         {
             //code
-
+            var grades = new List<string>(classGrades);
+            var dropLowest = grades.Where(x => x != grades.Min()).ToList();
+            var calculateAvg = dropLowest.Average(null);
+            var calculateAll = calculateAvg;
             //return
-
+            return calculateAll;
         }
         #endregion
 
