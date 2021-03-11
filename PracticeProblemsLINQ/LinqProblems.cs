@@ -16,13 +16,11 @@ namespace PracticeProblemsLINQ
         //Using LINQ, write a method that takes in a list of strings and returns all words that contain the substring “th” from a list.
         public static List<string> RunProblem1(List<string> words)
         {
-            //code
-
-            //return
-
+            var wordsThatContainTh = words.FindAll(x => x.Contains("th")).ToList();
+            return wordsThatContainTh;
         }
         #endregion
-
+       
         #region Problem 2 
         //(5 points) Problem 2
         //Using LINQ, write a method that takes in a list of strings and returns a copy of the list without duplicates.
