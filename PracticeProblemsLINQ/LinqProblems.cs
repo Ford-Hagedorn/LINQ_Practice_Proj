@@ -57,9 +57,9 @@ namespace PracticeProblemsLINQ
             //code
             var custId = new List<Customer>(customers);
             var find3 = custId.Find(x => x.Id.Equals(3));
-            var change3FN = find3.FirstName.Replace(oldChar, newChar: "Scott");
-            var change3LN = find3.LastName.Replace(oldChar, newChar: "Aukerman");
-            return change3FN, change3LN;
+            find3.FirstName = "Scott";
+            find3.LastName = "Aukerman";
+            return find3;
 
 
             //return
