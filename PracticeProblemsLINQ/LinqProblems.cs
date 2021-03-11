@@ -28,8 +28,9 @@ namespace PracticeProblemsLINQ
         {
             //code
             var nameChart = new List<string>(names);
-            var nameList = nameChart.Find(x => x.
+            var nameList = nameChart.GroupBy(x => x.Equals(names)).Select(y => y.First()).ToList();
             //return
+            return nameList;
 
         }
         #endregion
