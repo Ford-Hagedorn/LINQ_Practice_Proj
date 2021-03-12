@@ -57,7 +57,7 @@ namespace PracticeProblemsLINQ
             //code
             var custId = new List<Customer>(customers);
             var find3 = custId.Find(x => x.Id.Equals(3));
-            find3.FirstName = "Scott";
+            find3.FirstName = new FirstName("Scott");
             find3.LastName = "Aukerman";
             return find3;
 
@@ -78,24 +78,26 @@ namespace PracticeProblemsLINQ
             //code
             var grades = new List<string>(classGrades);
             var dropLowest = grades.Where(x => x != grades.Min()).ToList();
-            var calculateAvg = dropLowest.Average(null);
+            var calculateAvg = dropLowest.Average(x => x.Length);
             var calculateAll = calculateAvg;
             //return
             return calculateAll;
         }
+        
+
         #endregion
 
         #region Bonus Problem 1
         //(5 points) Bonus Problem 1
         //Write a method that takes in a string of letters(i.e. “Terrill”) 
         //and returns an alphabetically ordered string corresponding to the letter frequency(i.e. "E1I1L2R2T1")
-        public static string RunBonusProblem1(string word)
-        {
+        //public static string RunBonusProblem1(string word)
+        //{
             //code
 
             //return
 
-        }
+        //}
         #endregion
     }
 }
